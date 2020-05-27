@@ -9,14 +9,16 @@
   <body>   
     <header>           
       <nav>
-        <a>
+        <a href="index.html">
           <img src="img/logo_device.svg" alt="Логотип интернет-магазина Device" width="163" height="35"> <!-- Лого в хедере -->
         </a>
 
         <div> <!-- Первая линия элементов в хедере (Поиск, войти, сравнить и корзина) -->
-          <div> <!-- Поиск по сайту -->
-            <!-- Тут будет форма поиска и кнопка найти. -->          
-          </div>
+          <form action="https://echo.htmlacademy.ru/courses" method="post"> <!-- Форма поиска -->
+            <label class="visually-hidden" for="search">Поиск по сайту</label>
+            <input type="search" id="search" name="search" placeholder="Поиск по сайту">
+            <button type="submit">Найти</button>
+          </form>
 
           <ul> <!-- Войти, сравнить, корзина в хедере-->
             <li> <!-- Войти в хедере-->
@@ -35,7 +37,20 @@
 
         <div> <!-- Вторая линия элементов в хедере (навигация - каталог, доставка, гарантия, контакты) -->
           <ul>
-            <li><a href="">Каталог товаров</a></li>
+            <li>
+              <a href="">Каталог товаров</a>
+              <ul>
+                <li><a href="">Виртуальная реальность</a></li>
+                <li><a href="monopods.html">Моноподы для селфи</a></li>
+                <li><a href="">Экшн-камеры</a></li>
+                <li><a href="">Фитнес-браслеты</a></li>
+                <li><a href="">Умные часы</a></li>
+                <li><a href="">Квадрокоптер</a></li>
+              </ul>
+            </li>           
+          </ul>
+
+          <ul>
             <li><a href="">Доставка</a></li>
             <li><a href="">Гарантия</a></li>
             <li><a href="">Контакты</a></li>
@@ -45,17 +60,14 @@
     </header>
 
     <main>
-      <h1>Интернет-магазин Device</h1> <!-- Логический заголовок, нужно спрятать потом -->
+      <h1 class="visually-hidden">Интернет-магазин Device</h1> <!-- Логический заголовок, спрятан -->
 
       <section> <!-- Слайдер - начало блока -->
-        <h2>Товары интернет-магазина Device</h2> <!-- Логический заголовок, нужно спрятать потом -->
+        <h2 class="visually-hidden">Товары интернет-магазина Device</h2> <!-- Логический заголовок, спрятан -->
        
         <ul> <!-- Слайды - начало блока -->
-
           <li> <!-- Слайд 1 -->
-
-            <!-- Баннер 1 -->
-            <img src="img/slider_monopod.png" alt="Палка для селфи длиной 8 метров и весом 5 килограм" width="384" height="486"> 
+            <img src="img/slider_monopod.png" alt="Палка для селфи длиной 8 метров и весом 5 килограм" width="384" height="486"> <!-- Баннер 1 -->
 
             <div> <!-- Текстовый контент слайда 1 -->
               <h2>
@@ -165,10 +177,10 @@
       </section> <!-- Слайдер - конец блока -->
 
       <section> <!-- Категории товаров -->
-        <h2>Товары интернет-магазина Device</h2> <!-- Логический заголовок, нужно спрятать потом -->
+        <h2 class="visually-hidden">Товары интернет-магазина Device</h2> <!-- Логический заголовок, спрятан -->
         <ul>
           <li><a href="">Виртуальная реальность</a></li>
-          <li><a href="">Моноподы для селфи</a></li>
+          <li><a href="monopods.html">Моноподы для селфи</a></li>
           <li><a href="">Экшн-камеры</a></li>
           <li><a href="">Фитнес-браслеты</a></li>
           <li><a href="">Умные часы</a></li>
@@ -177,7 +189,7 @@
       </section>
 
       <section> <!-- Начало блока "Доставка, гарантия, кредит" -->
-        <h2>Условия работы магазина Device</h2> <!-- Логический заголовок, нужно спрятать потом -->
+        <h2 class="visually-hidden">Условия работы магазина Device</h2> <!-- Логический заголовок, спрятан -->
 
         <ul> <!-- Кнопки -->
           <li>Доставка</li>
@@ -219,7 +231,7 @@
       </section> <!-- Конец блока "Доставка, гарантия, кредит" -->
 
       <section> <!-- Бренды -->
-        <h2>Бренды магазина Device</h2> <!-- Логический заголовок, нужно спрятать потом -->
+        <h2 class="visually-hidden">Бренды магазина Device</h2> <!-- Логический заголовок, спрятан -->
 
         <ul>
           <li>
@@ -268,7 +280,7 @@
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 
         <a href=""> <!-- Карта -->
-          <img src="img/map.jpg" alt="Карта офиса Device по адресу улица Строителей, 15" width="560" height="222">
+          <img src="img/map.jpg" alt="Карта с расположением офиса Device по адресу г.Москва, улица Строителей, 15" width="560" height="222">
         </a>
 
         <a href="">Напишите нам</a>
@@ -277,7 +289,7 @@
 
     <footer>
       <div> <!-- Первая линия элементов футера (лого, войти/выйти, сравнить, корзина) -->
-        <a>
+        <a href="index.html">
           <img src="img/logo_device.svg" alt="Логотип интернет-магазина Device" width="163" height="35"> <!--Логотип в футере-->
         </a>
 
@@ -328,6 +340,39 @@
         <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> <!-- Сделать иконкой HTML Academy -->
       </div>
     </footer>
+
+    <section> <!-- Модальник с картой -->
+      <h2 class="visually-hidden">Большая карта с расположением офиса Device по адресу г.Москва, улица Строителей, 15</h2> <!-- Логический заголовок, спрятан -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1891.2804560165346!2d37.528309122449144!3d55.68682885028654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54cf65f5c8955%3A0x694710ccd55501e!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQnNC-0YHQutCy0LAsIDExOTMxMQ!5e0!3m2!1sru!2sru!4v1590612560587!5m2!1sru!2sru" width="994" height="593" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <button type="button">Закрыть</button>
+    </section>
+
+    <section> <!-- Модальник "Напишите нам" -->
+      <h2 class="visually-hidden">Обратная связь</h2> <!-- Логический заголовок, спрятан -->
+      <button type="button">Закрыть</button>
+      <form action="https://echo.htmlacademy.ru/courses" method="post">
+        <fieldset>
+          <legend class="visually-hidden">Напишите нам</legend> <!-- Спрятано -->
+
+          <div>
+            <label for="write-us-name">Ваше имя:</label>
+            <input type="text" id="write-us-name" name="name" placeholder="Имя Фамилия" required>
+          </div>
+
+          <div>
+            <label for="write-us-email">Ваш e-mail:</label>
+            <input type="email" id="write-us-email" name="email" placeholder="email@example.com" required>
+          </div>
+
+          <div>
+            <label for="write-us-message">Текст письма</label>
+            <textarea id="write-us-message" name="message" placeholder="В свободной форме" required></textarea>
+          </div>
+
+          <button type="submit">Отправить</button>
+        </fieldset>
+      </form>
+    </section>
 
   </body>
 </html>
