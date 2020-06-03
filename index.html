@@ -14,11 +14,11 @@
           <img src="img/logo-device.svg" alt="Логотип интернет-магазина Device" width="163" height="35"> <!-- Лого в хедере -->
         </a>
 
-        <div class="header-menu-top"> <!-- Первая линия элементов в хедере (Поиск, войти, сравнить и корзина) -->
+        <div class="header-menu"> <!-- Первая линия элементов в хедере (Поиск, войти, сравнить и корзина) -->
           <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="post"> <!-- Форма поиска -->
             <label class="visually-hidden" for="search">Поиск по сайту</label>
-            <input type="search" id="search" name="search" placeholder="Поиск по сайту">
-            <button class="search-form-button" type="submit">Найти</button>
+            <input class="search-form-input" type="search" id="search" name="search" placeholder="Поиск по сайту">
+            <button class="search-form-button" type="submit"><span>Найти</span></button>
           </form>
 
           <ul > <!-- Войти, сравнить, корзина в хедере-->
@@ -36,10 +36,10 @@
           </ul>
         </div>
 
-        <div class="header-menu-bottom"> <!-- Вторая линия элементов в хедере (навигация - каталог, доставка, гарантия, контакты) -->
+        <div class="header-submenu"> <!-- Вторая линия элементов в хедере (навигация - каталог, доставка, гарантия, контакты) -->
           <ul>
             <li>
-              <a class="menu-bottom catalog" href="">Каталог товаров</a>
+              <a class="header-submenu-link catalog" href="">Каталог товаров</a>
               <ul class="catalog-list">
                 <li><a href="">Виртуальная реальность</a></li>
                 <li><a href="monopods.html">Моноподы для селфи</a></li>
@@ -52,9 +52,9 @@
           </ul>
 
           <ul>
-            <li><a class="menu-bottom" href="">Доставка</a></li>
-            <li><a class="menu-bottom" href="">Гарантия</a></li>
-            <li><a class="menu-bottom" href="">Контакты</a></li>
+            <li><a class="header-submenu-link" href="">Доставка</a></li>
+            <li><a class="header-submenu-link" href="">Гарантия</a></li>
+            <li><a class="header-submenu-link" href="">Контакты</a></li>
           </ul>
         </div>
       </nav>

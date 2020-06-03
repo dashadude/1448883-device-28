@@ -45,15 +45,16 @@
     --special-yellow-dark: #F0C52E;
     --special-yellow-light: #F7E296;
     --special-green: #91C92F;
+    --special-grey: #DCDCDC;
 
     --status-light-pink: #F6DADA;
 }
 
 :focus {
     outline: 2px solid var(--special-yellow-dark);
+    padding: 1px;
     box-sizing: border-box;
 }
-
 
 /* Global */
 
@@ -88,15 +89,16 @@ img {
     list-style: none;
 }
 
-.header-logo img:hover, img:focus {
+.header-logo:hover, 
+.header-logo:focus {
     opacity: 0.6;
 }
 
-.header-logo img:active {
+.header-logo:active {
     opacity: 0.3;
 }
 
-.search-form input {
+.search-form-input {
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 22px;
@@ -104,20 +106,29 @@ img {
     background-color: transparent;
 }
 
+.search-form {
+    width: 440px;
+    height: 50px;
+}
+
 .search-form ::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--basic-black);
+    opacity: 0.3;
 }
 
 .search-form:hover ::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--basic-black);
+    opacity: 0.6;
 }
 
 .search-form ::-moz-placeholder {
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--basic-black);
+    opacity: 0.3;
 }
 
 .search-form:hover ::-moz-placeholder {
-    color: rgba(0, 0, 0, 0.6);
+    color: var(--basic-black);
+    opacity: 0.6;
 }
 
 .search-form-button {
@@ -127,6 +138,14 @@ img {
     border: 2px solid var(--basic-black);
     border-radius: 0;
     box-sizing: border-box;
+    visibility: hidden;
+}
+
+.search-form:hover .search-form-button,
+.search-form:focus .search-form-button,
+.search-form:active .search-form-button,
+.search-form-input:focus .search-form-button {
+    visibility: visible;
 }
 
 .search-form-button:hover,
@@ -135,20 +154,24 @@ img {
     background-color: var(--basic-black);
 }
 
-.search-form-button:active {
-    color: rgba(255, 255, 255, 0.3);
+.search-form-button:active span {
     background-color: var(--basic-black);
+    color: var(--basic-white);
+    opacity: 0.3;
 }
 
-.header-navigation a:hover, a:focus {
-    color: rgba(0, 0, 0, 0.6);
+.header-navigation a:hover, 
+.header-navigation a:focus {
+    color: var(--basic-black);
+    opacity: 0.6;
 }
 
 .header-navigation a:active {
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--basic-black);
+    opacity: 0.3;
 }
 
-.menu-bottom {
+.header-submenu-link {
     font-family: "Gilroy Bold", Arial, sans-serif;
     font-size: 18px;
     line-height: 22px;
@@ -156,7 +179,7 @@ img {
     text-transform: uppercase;
 }
 
-.menu-bottom.catalog {
+.catalog {
     letter-spacing: 1.8px;
 }
 
@@ -194,12 +217,13 @@ img {
     text-transform: uppercase; 
 }
 
-/* ПОКА НЕ ЗНАЮ КАК СТИЛИЗОВАТЬ ХОВЕР (ЖЕЛТЫЙ ФОН) */
+/* ХОВЕР (ЖЕЛТЫЙ ФОН) СТИЛИЗУЮ ПОЗЖЕ, КОГДА ЗАЙМУСЬ ПСЕВДОЭЛЕМЕНТАМИ*/
 /* .about-us-button:hover {} */
 
 .button:focus,
 .button:active {
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--basic-black);
+    opacity: 0.3;
 }
 
 .contacts-section p {
@@ -214,11 +238,12 @@ img {
     color: var(--basic-white);
 }
 
-.footer-logo img:hover, img:focus {
+.footer-logo:hover, 
+.footer-logo:focus {
     opacity: 0.6;
 }
 
-.footer-logo img:active {
+.footer-logo:active {
     opacity: 0.3;
 }
 
@@ -227,15 +252,18 @@ img {
 }
 
 .footer-menu a {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--basic-white);
+    opacity: 0.7;
 }
 
-.footer-menu a:hover, a:focus {
+.footer-menu a:hover, 
+.footer-menu a:focus {
     color: var(--basic-white);
 }
 
 .footer-menu a:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: var(--basic-white);
+    opacity: 0.3;
 }
 
 .footer address {
@@ -254,32 +282,38 @@ img {
     color: var(--basic-white);
 }  
 
-.footer-navigation a:hover, a:focus {
-    color: rgba(255, 255, 255, 0.6);
+.footer-navigation a:hover, 
+.footer-navigation a:focus {
+    color: var(--basic-white);
+    opacity: 0.6;
 }
 
 .footer-navigation a:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: var(--basic-white);
+    opacity: 0.3;
 }
 
 .footer-phone {
     font-family: "Open Sans Light", Arial, sans-serif;
-    font-style: normal;
     font-size: 15px;
     line-height: 20px;
     color: var(--basic-white);
 }
 
 .social-icons a {
-    color: rgba(255, 255, 255, 0.3);
+    color: var(--basic-white);
+    opacity: 0.3;
 }
 
-.social-icons a:hover, a:focus {
-    color: rgba(255, 255, 255, 0.6);
+.social-icons a:hover, 
+.social-icons a:focus {
+    color: var(--basic-white);
+    opacity: 0.6;
 }
 
 .social-icons a:active {
-    color: rgba(255, 255, 255, 0.1);
+    color: var(--basic-white);
+    opacity: 0.1;
 }
 
 .htmlacademy-logo {
@@ -297,7 +331,7 @@ img {
 
 /* MONOPODS PAGE BODY */
 
-.monopods-page-body h1 {
+.monopods-page-body .monopods-page-title {
     font-family: "Gilroy Bold", Arial, sans-serif;
     font-size: 47px;
     line-height: 58px;
@@ -310,15 +344,19 @@ img {
 .breadcrumbs a {
     font-size: 14px;
     line-height: 19px;
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--basic-black);
+    opacity: 0.3;
 }
 
-.breadcrumbs a:hover, a:focus {
-    color: rgba(0, 0, 0, 0.6);
+.breadcrumbs a:hover, 
+.breadcrumbs a:focus {
+    color: var(--basic-black);
+    opacity: 0.6;
 }
 
 .breadcrumbs a:active {
-    color: rgba(0, 0, 0, 0.1);
+    color: var(--basic-black);
+    opacity: 0.1;
 }
 
 .catalog-section h2 {
@@ -330,7 +368,7 @@ img {
 }
 
 .filter-title-wrapper {
-    background-color: #DCDCDC; /* Не нашла данный цвет в палитре стайлгайда - добавить самостоятельно или это трюк с наложением двух одинаковых по цвету блоков? */
+    background-color: var(--special-grey);
 }
 
 .filter-section {
@@ -373,23 +411,29 @@ img {
 }
 
 .sorting-section a {
-    color: rgba(0, 0, 0, 0.3);
+    color: var(--basic-black);
+    opacity: 0.3;
 }
 
-.sorting-section a:hover, a:focus {
-    color: rgba(0, 0, 0, 0.6);
+.sorting-section a:hover, 
+.sorting-section a:focus {
+    color: var(--basic-black);
+    opacity: 0.6;
 }
 
 .sorting-section a:active {
     color: var(--basic-black);
 }
 
-ul .sorting-controls {
-    color: rgba(0, 0, 0, 0.2);
+.sorting-controls {
+    color: var(--basic-black);
+    opacity: 0.2;
 }
 
-ul .sorting-controls:hover, sorting-controls:focus {
-    color: rgba(0, 0, 0, 0.4);
+.sorting-controls:hover, 
+.sorting-controls:focus {
+    color: var(--basic-black);
+    opacity: 0.4;
 }
 
 .items-list ul {
@@ -418,15 +462,18 @@ ul .sorting-controls:hover, sorting-controls:focus {
     font-size: 13px;
     line-height: 18px;
     letter-spacing: 1.3px;
-    color: rgba(0, 0, 0, 0.5);
+    color: var(--basic-black);
+    opacity: 0.5;
 }
 
-.add-to-comparison:hover, .add-to-comparison:focus {
+.add-to-comparison:hover, 
+.add-to-comparison:focus {
     color: var(--basic-black);
 }
 
 .add-to-comparison:active {
-    color: rgba(0, 0, 0, 0.2);
+    color: var(--basic-black);
+    opacity: 0.2;
 }
 
 /* Modal Windows */ /* ВСЕ МОДАЛЬНИКИ ВРЕМЕННО СКРЫТЫ */
