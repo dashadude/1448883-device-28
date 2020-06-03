@@ -1,6 +1,445 @@
+/* Fonts */
+
+@font-face {
+    font-family: "Open Sans Light";
+    src: url("../fonts/opensanslight.woff2") format('woff2'),
+         url("../fonts/opensanslight.woff") format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+  @font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/opensans.woff2") format('woff2'),
+         url("../fonts/opensans.woff") format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/gilroylight.woff2") format('woff2'),
+         url("../fonts/gilroylight.woff") format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gilroy Bold";
+    src: url("../fonts/gilroyextrabold.woff2") format('woff2'),
+         url("../fonts/gilroyextrabold.woff") format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* Variables */
+
+:root {
+    --basic-black: #000000;
+    --basic-dark: #363636;
+    --basic-grey: #464646;
+    --basic-half-grey: #7E7E7E;
+    --basic-grey-light: #E5E5E5;
+    --basic-white: #ffffff;
+  
+    --special-yellow-dark: #F0C52E;
+    --special-yellow-light: #F7E296;
+    --special-green: #91C92F;
+
+    --status-light-pink: #F6DADA;
+}
+
+:focus {
+    outline: 2px solid var(--special-yellow-dark);
+    box-sizing: border-box;
+}
 
 
-/* Тут будет все остальное */
+/* Global */
+
+body {
+    min-width: 1160px;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans Light", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 20px;    
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
+a {
+    text-decoration: none;
+    color: var(--basic-black);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
+
+.header {
+    background-color: var(--special-yellow-light);
+}
+
+.header-navigation ul {
+    list-style: none;
+}
+
+.header-logo img:hover, img:focus {
+    opacity: 0.6;
+}
+
+.header-logo img:active {
+    opacity: 0.3;
+}
+
+.search-form input {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 22px;
+    border: none;
+    background-color: transparent;
+}
+
+.search-form ::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form:hover ::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.search-form ::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.search-form:hover ::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.search-form-button {
+    text-transform: uppercase;
+    background-color: transparent;
+    padding: 15px 17px 15px 17px;
+    border: 2px solid var(--basic-black);
+    border-radius: 0;
+    box-sizing: border-box;
+}
+
+.search-form-button:hover,
+.search-form-button:focus {
+    color: var(--basic-white);
+    background-color: var(--basic-black);
+}
+
+.search-form-button:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: var(--basic-black);
+}
+
+.header-navigation a:hover, a:focus {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.header-navigation a:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-bottom {
+    font-family: "Gilroy Bold", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+}
+
+.menu-bottom.catalog {
+    letter-spacing: 1.8px;
+}
+
+.catalog-list a {
+    font-family: "Open Sans Light", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: none;
+}
+
+/* MAIN PAGE BODY */
+
+.main-page-body h2 {
+    font-family: "Gilroy Bold", Arial, sans-serif;
+    font-size: 47px;
+    line-height: 58px;
+    letter-spacing: 9.4px;
+}
+
+.about-us-section p {
+    line-height: 28px;
+}
+
+.about-us-section li {
+    font-family: "Gilroy Bold", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.button {
+    font-family: "Gilroy Bold", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 3.6px;
+    text-transform: uppercase; 
+}
+
+/* ПОКА НЕ ЗНАЮ КАК СТИЛИЗОВАТЬ ХОВЕР (ЖЕЛТЫЙ ФОН) */
+/* .about-us-button:hover {} */
+
+.button:focus,
+.button:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.contacts-section p {
+    line-height: 28px;
+}
+
+/* Footer */
+
+.footer {
+    background-color: var(--basic-dark);
+    width: 100%;
+    color: var(--basic-white);
+}
+
+.footer-logo img:hover, img:focus {
+    opacity: 0.6;
+}
+
+.footer-logo img:active {
+    opacity: 0.3;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer-menu a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-menu a:hover, a:focus {
+    color: var(--basic-white);
+}
+
+.footer-menu a:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.footer address {
+    font-family: "Open Sans Light", Arial, sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.footer-navigation a {
+    font-family: "Gilroy Bold", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    color: var(--basic-white);
+}  
+
+.footer-navigation a:hover, a:focus {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-navigation a:active {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-phone {
+    font-family: "Open Sans Light", Arial, sans-serif;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: var(--basic-white);
+}
+
+.social-icons a {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.social-icons a:hover, a:focus {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.social-icons a:active {
+    color: rgba(255, 255, 255, 0.1);
+}
+
+.htmlacademy-logo {
+    color: var(--special-yellow-dark);
+}
+
+.htmlacademy-logo:hover,
+.htmlacademy-logo:focus {
+    opacity: 0.6;
+}
+
+.htmlacademy-logo:active {
+    opacity: 0.3;
+}
+
+/* MONOPODS PAGE BODY */
+
+.monopods-page-body h1 {
+    font-family: "Gilroy Bold", Arial, sans-serif;
+    font-size: 47px;
+    line-height: 58px;
+}
+
+.breadcrumbs {
+    list-style: none;
+}
+
+.breadcrumbs a {
+    font-size: 14px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumbs a:hover, a:focus {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs a:active {
+    color: rgba(0, 0, 0, 0.1);
+}
+
+.catalog-section h2 {
+    font-family: "Gilroy Bold", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.filter-title-wrapper {
+    background-color: #DCDCDC; /* Не нашла данный цвет в палитре стайлгайда - добавить самостоятельно или это трюк с наложением двух одинаковых по цвету блоков? */
+}
+
+.filter-section {
+    background-color: var(--basic-grey-light);
+}
+
+.filter-section legend {
+    font-family: "Gilroy Bold", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1.4px;
+}
+
+.filter-section ul {
+    list-style: none;
+    line-height: 19px;   
+}
+
+.price-filter span {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.filter-section label {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.button-submit {
+    border: none;
+}
+
+.sorting-section {
+    background-color: var(--basic-grey-light);
+}
+
+.sorting-section ul {
+    list-style: none; 
+}
+
+.sorting-section a {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-section a:hover, a:focus {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.sorting-section a:active {
+    color: var(--basic-black);
+}
+
+ul .sorting-controls {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+ul .sorting-controls:hover, sorting-controls:focus {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.items-list ul {
+    list-style: none;
+}
+
+.item-hover { /* СКРЫЛА ХОВЕРЫ КАРТОЧЕК ТОВАРА, ПОТОМ ДОРАБОТАЕМБ СОГЛАСНО ЗАДАНИЮ */
+    display: none;
+}
+
+.item-name {
+    font-family: "Gilroy Bold", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.9px;
+}
+
+.item-price {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.8px;
+}
+
+.add-to-comparison {
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1.3px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.add-to-comparison:hover, .add-to-comparison:focus {
+    color: var(--basic-black);
+}
+
+.add-to-comparison:active {
+    color: rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Windows */ /* ВСЕ МОДАЛЬНИКИ ВРЕМЕННО СКРЫТЫ */
+
+.modal-map {
+    display: none;
+}
+
+.modal-contact-us {
+    display: none;
+}
+
+/* Other */
 
 .visually-hidden {
     position: absolute;
@@ -11,4 +450,5 @@
     padding: 0;
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}
+

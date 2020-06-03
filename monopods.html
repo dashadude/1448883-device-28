@@ -3,21 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс - Моноподы</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   
-  <body>
-    <header>     
-      <nav>
-        <a href="index.html" aria-label="Перейти на главную страницу интернет-магазина Device">
-          <img src="img/logo_device.svg" alt="Логотип интернет-магазина Device" width="163" height="35"> <!-- Лого в хедере -->
+  <body class="monopods-page-body">
+    <header class="header">     
+      <nav class="header-navigation">
+        <a class="header-logo" href="index.html" aria-label="Перейти на главную страницу интернет-магазина Device">
+          <img src="img/logo-device.svg" alt="Логотип интернет-магазина Device" width="163" height="35"> <!-- Лого в хедере -->
         </a>
 
-        <div> <!-- Первая линия элементов в хедере (Поиск, войти, сравнить и корзина) -->
-          <form action="https://echo.htmlacademy.ru/courses" method="post"> <!-- Форма поиска -->
+        <div class="header-menu-top"> <!-- Первая линия элементов в хедере (Поиск, войти, сравнить и корзина) -->
+          <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="post"> <!-- Форма поиска -->
             <label class="visually-hidden" for="search">Поиск по сайту</label>
             <input type="search" id="search" name="search" placeholder="Поиск по сайту">
-            <button type="submit">Найти</button>
+            <button class="search-form-button" type="submit">Найти</button>
           </form>
 
           <ul> <!-- Выйти, сравнить, корзина в хедере-->
@@ -35,11 +36,11 @@
           </ul>
         </div>
 
-        <div> <!-- Вторая линия элементов в хедере (навигация - каталог, доставка, гарантия, контакты) -->
+        <div class="header-menu-bottom"> <!-- Вторая линия элементов в хедере (навигация - каталог, доставка, гарантия, контакты) -->
           <ul>
             <li>
-              <a href="">Каталог товаров</a>
-              <ul>
+              <a class="menu-bottom catalog" href="">Каталог товаров</a>
+              <ul class="catalog-list">
                 <li><a href="">Виртуальная реальность</a></li>
                 <li><a href="monopods.html">Моноподы для селфи</a></li>
                 <li><a href="">Экшн-камеры</a></li>
@@ -51,9 +52,9 @@
           </ul>
 
           <ul>
-            <li><a href="">Доставка</a></li>
-            <li><a href="">Гарантия</a></li>
-            <li><a href="">Контакты</a></li>
+            <li><a class="menu-bottom" href="">Доставка</a></li>
+            <li><a class="menu-bottom" href="">Гарантия</a></li>
+            <li><a class="menu-bottom" href="">Контакты</a></li>
           </ul>
         </div>
       </nav>
@@ -70,22 +71,22 @@
         </ul>
       </div>
 
-      <section> <!-- Начало большой секции с каталогом товаров -->
+      <section class="catalog-section"> <!-- Начало большой секции с каталогом товаров -->
         <h2 class="visually-hidden">Каталог товаров</h2> <!-- Логический заголовок, спрятан -->
 
-        <section> <!-- Начало блока с фильтрами -->
+        <section class="filter-section"> <!-- Начало блока с фильтрами -->
           <h2 class="visually-hidden">Фильтр товаров</h2>
-          <div> <!-- Темный блок с Фильтром (с заголовком) -->
+          <div class="filter-title-wrapper"> <!-- Темный блок с Фильтром (с заголовком) -->
             <h2>Фильтр:</h2>
           </div>
 
           <form action="https://echo.htmlacademy.ru/courses" method="post">
-            <fieldset> <!-- Фильтр по стоимости -->
+            <fieldset class="price-filter"> <!-- Фильтр по стоимости -->
               <legend>Стоимость</legend>
-              от 0<input type="range" id="filter-range" name="price-range" min="0" max="5000" value="5000">до 5000<!-- Не понимаю пока как реализовать 2 ползунка и динамичный текст под ними -->
+              <span>от 0</span><input type="range" id="filter-range" name="price-range" min="0" max="5000" value="5000"><span>до 5000</span><!-- Не понимаю пока как реализовать 2 ползунка и динамичный текст под ними -->
             </fieldset>
 
-            <fieldset> <!-- Фильтр по цвету -->
+            <fieldset class="color-filter"> <!-- Фильтр по цвету -->
               <legend>Цвет</legend>
               <ul>
                 <li>
@@ -111,7 +112,7 @@
               </ul>
             </fieldset>
 
-            <fieldset> <!-- Фильтр по Bluetooth -->
+            <fieldset class="bluetooth-filter"> <!-- Фильтр по Bluetooth -->
               <legend>Bluetooth</legend>
               <ul>
                 <li>
@@ -125,12 +126,12 @@
               </ul>
             </fieldset>
 
-            <button type="submit">Показать</button> <!-- Кнопка "Показать" -->
+            <button class="button button-submit" type="submit">Показать</button> <!-- Кнопка "Показать" -->
           </form>
         </section> <!-- Конец блока с фильтрами -->
 
         <section> <!-- Начало блока с сортировкой и карточками товаров -->
-          <div> <!-- Серый блок с заголовком сортировки и критериями (по цене, по типу, по популярности) -->
+          <div class="sorting-section"> <!-- Серый блок с заголовком сортировки и критериями (по цене, по типу, по популярности) -->
             <h2>Сортировка:</h2>
 
             <ul>
@@ -139,53 +140,61 @@
               <li><a href="">По популярности</a></li>
             </ul>
 
-            <ul> <!-- Стрелочки сортировки -->
+            <ul class="sorting-controls"> <!-- Стрелочки сортировки -->
               <li><a href="">Сортировка по возрастанию</a></li> <!-- Текст будет скрытым -->
               <li><a href="">Сортировка по убыванию</a></li> <!-- Текст будет скрытым -->
             </ul>
           </div>
 
-          <section> <!-- Белый блок с карточками товара -->
+          <section class="items-list"> <!-- Белый блок с карточками товара -->
             <h2 class="visually-hidden">Каталог селфи-палок</h2> <!-- Логический заголовок, спрятан -->
 
             <ul>
               <li> <!-- Карточка товара "Любительская селфи-палка" -->
-                <img src="img/item_1.jpg" alt="Любительская селфи-палка с креплением для телефона и телескопической рукояткой" width="360" height="380">
-                <a href="">Любительская селфи-палка</a>
-                <p>500 руб.</p>
-                <div>
-                  <a href="">В корзину</a>
-                  <a href="">Добавить к сравнению</a>
+                <img src="img/item-1.jpg" alt="Любительская селфи-палка с креплением для телефона и телескопической рукояткой" width="360" height="380">
+                <p>
+                  <a class="item-name" href="">Любительская селфи-палка</a>
+                  <span class="item-price">500 руб.</span>
+                </p>
+                <div class="item-hover">
+                  <a class="button" href="">В корзину</a>
+                  <a class="add-to-comparison" href="">Добавить к сравнению</a>
                 </div>
               </li>
   
               <li> <!-- Карточка товара "Профессиональная селфи-палка" -->
-                <img src="img/item_2.jpg" alt="Профессиональная селфи-палка со стабилизацией и стальным корпусом черного цвета" width="360" height="380">
-                <a href="">Профессиональная селфи-палка</a>
-                <p>1 500 руб.</p>
-                <div>
-                  <a href="">В корзину</a>
-                  <a href="">Добавить к сравнению</a>
+                <img src="img/item-2.jpg" alt="Профессиональная селфи-палка со стабилизацией и стальным корпусом черного цвета" width="360" height="380">
+                <p>
+                  <a class="item-name" href="">Профессиональная селфи-палка</a>
+                  <span class="item-price">1 500 руб.</span>
+                </p>
+                <div class="item-hover">
+                  <a class="button" href="">В корзину</a>
+                  <a class="add-to-comparison" href="">Добавить к сравнению</a>
                 </div>
               </li>
   
               <li> <!-- Карточка товара "Непотопляемая селфи-палка" -->
-                <img src="img/item_3.jpg" alt="Непотопляемая селфи-палка для GoPro с черно-желтой рукояткой" width="360" height="380">
-                <a href="">Непотопляемая селфи-палка</a>
-                <p>2 500 руб.</p>
-                <div>
-                  <a href="">В корзину</a>
-                  <a href="">Добавить к сравнению</a>
+                <img src="img/item-3.jpg" alt="Непотопляемая селфи-палка для GoPro с черно-желтой рукояткой" width="360" height="380">
+                <p>
+                  <a class="item-name" href="">Непотопляемая селфи-палка</a>
+                  <span class="item-price">2 500 руб.</span>
+                </p>
+                <div class="item-hover">
+                  <a class="button" href="">В корзину</a>
+                  <a class="add-to-comparison" href="">Добавить к сравнению</a>
                 </div>
               </li>
   
               <li> <!-- Карточка товара "Селфи-палка Следуй за мной" -->
-                <img src="img/item_4.jpg" alt="Селфи-палка «Следуй за мной» с креплением для телефона и пластиковой рукой" width="360" height="380">
-                <a href="">Селфи-палка «Следуй за мной»</a>
-                <p>4 900 руб.</p>
-                <div>
-                  <a href="">В корзину</a>
-                  <a href="">Добавить к сравнению</a>
+                <img src="img/item-4.jpg" alt="Селфи-палка «Следуй за мной» с креплением для телефона и пластиковой рукой" width="360" height="380">
+                <p>
+                  <a class="item-name" href="">Селфи-палка «Следуй за мной»</a>
+                  <span class="item-price">4 900 руб.</span>
+                </p>
+                <div class="item-hover">
+                  <a class="button" href="">В корзину</a>
+                  <a class="add-to-comparison" href="">Добавить к сравнению</a>
                 </div>
               </li>
             </ul>           
@@ -208,13 +217,13 @@
       </section> <!-- Конец большой секции с каталогом товаров -->
     </main>
 
-    <footer>
+    <footer class="footer">
       <div> <!-- Первая линия элементов футера (лого, войти/выйти, сравнить, корзина) -->
-        <a href="index.html" aria-label="Перейти на главную страницу интернет-магазина Device">
-          <img src="img/logo_device.svg" alt="Логотип интернет-магазина Device" width="163" height="35"> <!--Логотип в футере-->
+        <a class="footer-logo" href="index.html" aria-label="Перейти на главную страницу интернет-магазина Device">
+          <img src="img/logo-device.svg" alt="Логотип интернет-магазина Device" width="163" height="35"> <!--Логотип в футере-->
         </a>
 
-        <ul><!-- Выйти, сравнить, корзина в футере-->
+        <ul class="footer-menu"><!-- Выйти, сравнить, корзина в футере-->
           <li> <!-- Войти/Выйти в футере-->
             <a href="">Валентин Петухов Выйти</a>
           </li>
@@ -232,7 +241,7 @@
       <div> <!-- Вторая линия элементов футера (адрес, доставка, гарантия, контакты, телефон) -->
         <address>г. Москва, ул. Строителей, 15</address> <!-- Адрес -->
 
-        <nav> <!-- Навигация в футере -->
+        <nav class="footer-navigation"> <!-- Навигация в футере -->
           <ul>
             <li><a href="">Доставка</a></li>
             <li><a href="">Гарантия</a></li>
@@ -241,12 +250,12 @@
         </nav>
 
         <p>
-          <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a> <!-- Телефон -->
+          <a class="footer-phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a> <!-- Телефон -->
         </p>
       </div>
 
       <div> <!-- Третья линия элементов футера (соц. сети, логотип  HTML Академии) -->
-        <ul> <!-- Соц. сети -->
+        <ul class="social-icons"> <!-- Соц. сети -->
           <li>
             <a href="">Facebook</a> <!-- Сделать иконкой Facebook -->              
           </li>
@@ -260,7 +269,7 @@
           </li>
         </ul>
 
-        <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> <!-- Сделать иконкой HTML Academy -->
+        <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> <!-- Сделать иконкой HTML Academy -->
       </div>
     </footer>
 
