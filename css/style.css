@@ -141,10 +141,7 @@ img {
     visibility: hidden;
 }
 
-.search-form:hover .search-form-button,
-.search-form:focus .search-form-button,
-.search-form:active .search-form-button,
-.search-form-input:focus .search-form-button {
+.search-form-input:focus + .search-form-button {
     visibility: visible;
 }
 
@@ -331,7 +328,7 @@ img {
 
 /* MONOPODS PAGE BODY */
 
-.monopods-page-body .monopods-page-title {
+.monopods-page-title {
     font-family: "Gilroy Bold", Arial, sans-serif;
     font-size: 47px;
     line-height: 58px;
