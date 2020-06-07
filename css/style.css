@@ -198,6 +198,67 @@ img {
     letter-spacing: 9.4px;
 }
 
+.main-page-body .slider-slogan {
+    letter-spacing: normal;
+}
+
+.main-slider-section ul {
+    list-style: none;
+}
+
+.main-slider-section th {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 3.6px;
+}
+
+.main-slider-section td {
+    font-family: "Gilroy", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 1.3px;
+}
+
+.product-categories ul {
+    list-style: none;
+}
+
+.product-categories a {
+    font-family: "Gilroy Bold", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.9px;
+}
+
+.product-categories a:active {
+    opacity: 0.3;
+}
+
+.services-slider {
+    background-color: var(--basic-grey-light);
+}
+
+.services-slider ul {
+    list-style: none;
+}
+
+.services-slider .services-button:active {
+    color: var(--special-yellow-light);
+    opacity: 1;
+    background-color: var(--basic-black);
+}
+
+.services-text p {
+    font-size: 15px;
+    line-height: 28px;
+    letter-spacing: 1.5px;
+}
+
+.brands-section ul {
+    list-style: none;
+}
+
 .about-us-section p {
     line-height: 28px;
 }
@@ -399,6 +460,7 @@ img {
 
 .button-submit {
     border: none;
+    background-color: transparent;
 }
 
 .sorting-section {
@@ -406,37 +468,34 @@ img {
 }
 
 .sorting-section ul {
-    list-style: none; 
+    list-style: none;
+    color: var(--basic-black); 
 }
 
-.sorting-section a {
-    color: var(--basic-black);
+.sorting-type {
     opacity: 0.3;
 }
 
-.sorting-section a:hover, 
-.sorting-section a:focus {
-    color: var(--basic-black);
+.sorting-type:hover, 
+.sorting-type:focus {
     opacity: 0.6;
 }
 
-.sorting-section a:active {
-    color: var(--basic-black);
+.sorting-type:active {
+    opacity: 1;
 }
 
 .sorting-controls {
-    color: var(--basic-black);
     opacity: 0.2;
 }
 
 .sorting-controls:hover, 
 .sorting-controls:focus {
-    color: var(--basic-black);
     opacity: 0.4;
 }
 
 .sorting-controls:active {
-    color: var(--basic-black);
+    opacity: 1;
 }
 
 .items-list ul {
@@ -502,14 +561,31 @@ img {
 }
 
 .pagination-item a:active {
-    color: var(--basic-black);
+    opacity: 1;
+}
+
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item-current a:focus,
+.pagination-item-current a:active {
+    opacity: 1;
 }
 
 .pagination-button {
     width: 120px;
     height: 70px;
+}
+
+.pagination-button:hover,
+.pagination-button:focus {
     background-color: var(--special-medium-grey);
 }
+
+.pagination-button:active span {
+    opacity: 0.3;
+}
+
+.pagination-button-text
 
 /* Modal Windows */ /* ВСЕ МОДАЛЬНИКИ ВРЕМЕННО СКРЫТЫ */
 
