@@ -84,7 +84,7 @@
       </nav>
     </header>
 
-    <main class="container">
+    <main class="main-monopods">
       <div> <!-- Блок с заголовком и хлебными крошками -->
         <h1 class="monopods-page-title">Моноподы для селфи</h1> <!-- Заголовок -->
 
@@ -99,12 +99,9 @@
         <h2 class="visually-hidden">Каталог товаров</h2> <!-- Логический заголовок, спрятан -->
 
         <section class="filter-section"> <!-- Начало блока с фильтрами -->
-          <h2 class="visually-hidden">Фильтр товаров</h2>
-          <div class="filter-title-wrapper"> <!-- Темный блок с Фильтром (с заголовком) -->
-            <h2>Фильтр:</h2>
-          </div>
+          <h2>Фильтр:</h2>
 
-          <form action="https://echo.htmlacademy.ru/courses" method="post">
+          <form class="filter-form" action="https://echo.htmlacademy.ru/courses" method="post">
             <fieldset class="price-filter"> <!-- Фильтр по стоимости -->
               <legend>Стоимость</legend>
               <span>от 0</span><input type="range" id="filter-range" name="price-range" min="0" max="5000" value="5000"><span>до 5000</span><!-- Не понимаю пока как реализовать 2 ползунка и динамичный текст под ними -->
@@ -158,25 +155,30 @@
           <div class="sorting-section"> <!-- Серый блок с заголовком сортировки и критериями (по цене, по типу, по популярности) -->
             <h2>Сортировка:</h2>
 
-            <ul>
-              <li><a class="sorting-type" href="">По цене</a></li>
-              <li><a class="sorting-type" href="">По типу</a></li>
-              <li><a class="sorting-type" href="">По популярности</a></li>
+            <ul class="sorting-type">
+              <li><a class="sorting-type-current" href="">По цене</a></li>
+              <li><a href="">По типу</a></li>
+              <li><a href="">По популярности</a></li>
             </ul>
 
-            <ul> <!-- Стрелочки сортировки -->
-              <li><a class="sorting-controls" href="">Сортировка по возрастанию</a></li> <!-- Текст будет скрытым -->
-              <li><a class="sorting-controls" href="">Сортировка по убыванию</a></li> <!-- Текст будет скрытым -->
+            <ul class="sorting-controls"> <!-- Стрелочки сортировки -->
+              <li class="sorting-controls-item">
+                <a href="" aria-label="Сортировка по возрастанию"></a>
+              </li>
+
+              <li class="sorting-controls-item">
+                <a class="sorting-controls-current" href="" aria-label="Сортировка по убыванию"></a>
+              </li>
             </ul>
           </div>
 
-          <section class="items-list"> <!-- Белый блок с карточками товара -->
+          <section class="products-section"> <!-- Белый блок с карточками товара -->
             <h2 class="visually-hidden">Каталог селфи-палок</h2> <!-- Логический заголовок, спрятан -->
 
-            <ul>
-              <li> <!-- Карточка товара "Любительская селфи-палка" -->
+            <ul class="product-list">
+              <li class="product-list-item"> <!-- Карточка товара "Любительская селфи-палка" -->
                 <img src="img/item-1.jpg" alt="Любительская селфи-палка с креплением для телефона и телескопической рукояткой" width="360" height="380">
-                <p>
+                <p class="item-info">
                   <a class="item-name" href="">Любительская селфи-палка</a>
                   <span class="item-price">500 руб.</span>
                 </p>
@@ -186,9 +188,9 @@
                 </div>
               </li>
   
-              <li> <!-- Карточка товара "Профессиональная селфи-палка" -->
+              <li class="product-list-item"> <!-- Карточка товара "Профессиональная селфи-палка" -->
                 <img src="img/item-2.jpg" alt="Профессиональная селфи-палка со стабилизацией и стальным корпусом черного цвета" width="360" height="380">
-                <p>
+                <p class="item-info">
                   <a class="item-name" href="">Профессиональная селфи-палка</a>
                   <span class="item-price">1 500 руб.</span>
                 </p>
@@ -198,9 +200,9 @@
                 </div>
               </li>
   
-              <li> <!-- Карточка товара "Непотопляемая селфи-палка" -->
+              <li class="product-list-item"> <!-- Карточка товара "Непотопляемая селфи-палка" -->
                 <img src="img/item-3.jpg" alt="Непотопляемая селфи-палка для GoPro с черно-желтой рукояткой" width="360" height="380">
-                <p>
+                <p class="item-info">
                   <a class="item-name" href="">Непотопляемая селфи-палка</a>
                   <span class="item-price">2 500 руб.</span>
                 </p>
@@ -210,9 +212,9 @@
                 </div>
               </li>
   
-              <li> <!-- Карточка товара "Селфи-палка Следуй за мной" -->
+              <li class="product-list-item"> <!-- Карточка товара "Селфи-палка Следуй за мной" -->
                 <img src="img/item-4.jpg" alt="Селфи-палка «Следуй за мной» с креплением для телефона и пластиковой рукой" width="360" height="380">
-                <p>
+                <p class="item-info">
                   <a class="item-name" href="">Селфи-палка «Следуй за мной»</a>
                   <span class="item-price">4 900 руб.</span>
                 </p>
@@ -302,7 +304,9 @@
             </li>
           </ul>
 
-          <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss" width="27" height="34" aria-label="Перейти на сайт HTML Академии"></a> <!-- Сделать иконкой HTML Academy -->
+          <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="img/logo-htmlacademy.svg" alt="Перейти на сайт HTML Академии" width="27" height="34">
+          </a>
         </div>
       </div>
     </footer>

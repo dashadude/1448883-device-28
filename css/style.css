@@ -104,6 +104,8 @@ img {
     padding: 0 20px;
 }
 
+/* Header */
+
 .header {
     position: relative;
     width: 1160px;
@@ -354,7 +356,7 @@ img {
     text-transform: none;
 }
 
-/* MAIN PAGE BODY */
+/* Main Page Body */
 
 .main-page-body h2 {
     font-family: "Gilroy Bold", Arial, sans-serif;
@@ -712,10 +714,6 @@ img {
     width: 32px;
     height: 32px;
     background-repeat: no-repeat;
-    opacity: 0.3;
-}
-
-.social-item {
     color: var(--basic-white);
     opacity: 0.3;
 }
@@ -744,27 +742,46 @@ img {
 }
 
 .htmlacademy-logo {
-    background-image: url("../img/logo-htmlacademy.svg"); /*Не понимаю почему не появляется иконка, путь указан верно*/
+    width: 27px;
+    height: 34px;
+    padding: 0;
+    margin-top: 68px;
 }
 
-.htmlacademy-logo:hover,
-.htmlacademy-logo:focus {
+.htmlacademy-logo img:hover,
+.htmlacademy-logo img:focus {
     opacity: 0.6;
 }
 
-.htmlacademy-logo:active {
+.htmlacademy-logo img:active {
     opacity: 0.3;
 }
 
-/* MONOPODS PAGE BODY */
+/* Monopods Page Body */
+
+.main-monopods {
+    width: 1100px;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 60px;
+    margin: 0 auto;
+}
 
 .monopods-page-title {
     font-family: "Gilroy Bold", Arial, sans-serif;
     font-size: 47px;
     line-height: 58px;
+    margin-top: 35px;
+    margin-bottom: 30px;
 }
 
 .breadcrumbs {
+    display: flex;
+    width: 450px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
     list-style: none;
 }
 
@@ -773,6 +790,7 @@ img {
     line-height: 19px;
     color: var(--basic-black);
     opacity: 0.3;
+    padding-right: 40px;
 }
 
 .breadcrumbs a:hover, 
@@ -786,6 +804,14 @@ img {
     opacity: 0.1;
 }
 
+/* Catalog */
+
+.catalog-section {
+    display: grid;
+    grid-template-columns: 268px 1fr;
+    grid-template-rows: min-content 1fr min-content;
+}
+
 .catalog-section h2 {
     font-family: "Gilroy Bold", Arial, sans-serif;
     font-size: 16px;
@@ -794,12 +820,25 @@ img {
     text-transform: uppercase;
 }
 
-.filter-title-wrapper {
-    background-color: var(--special-grey);
-}
+/* Catalog Filter */
 
 .filter-section {
     background-color: var(--basic-grey-light);
+    width: 100%;
+}
+
+.filter-section h2 {
+    padding: 25px 0;
+    margin: 0;
+    margin-bottom: 70px;
+    background-color: var(--special-grey);
+}
+
+.filter-section fieldset {
+    padding: 0;
+    border: none;
+    margin: 0;
+    margin-bottom: 38px;
 }
 
 .filter-section legend {
@@ -830,8 +869,20 @@ img {
     background-color: transparent;
 }
 
+/* Catalog Sorting */
+
 .sorting-section {
+    display: flex;
+    align-items: center;
+    padding-left: 72px;
+    margin-bottom: 70px;
     background-color: var(--basic-grey-light);
+}
+
+.sorting-section h2 {
+    width: 198px;
+    margin: 0;
+    padding: 25px 0;
 }
 
 .sorting-section ul {
@@ -840,34 +891,103 @@ img {
 }
 
 .sorting-type {
+    width: 508px;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.sorting-type li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.sorting-type li:last-child {
+    margin-right: 0;
+}
+
+.sorting-type a:not(.sorting-type-current) {
     opacity: 0.3;
 }
 
-.sorting-type:hover, 
-.sorting-type:focus {
+.sorting-type a:hover, 
+.sorting-type a:focus {
     opacity: 0.6;
 }
 
-.sorting-type:active {
+.sorting-type a:active {
+    opacity: 1;
+}
+
+.sorting-type-current {
     opacity: 1;
 }
 
 .sorting-controls {
+    display: flex;
+    width: 53px;
+    margin: 0;
+    padding: 0;
+    padding-left: 11px;
+    box-sizing: border-box;
+}
+
+.sorting-controls-item:first-child {
+    margin-right: 20px;   
+    transform: rotate(180deg);
+}
+
+.sorting-controls a {
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 11px solid var(--basic-black);
+}
+
+.sorting-controls a:not(.sorting-controls-current) {
     opacity: 0.2;
 }
 
-.sorting-controls:hover, 
-.sorting-controls:focus {
+.sorting-controls a:hover, 
+.sorting-controls a:focus {
     opacity: 0.4;
 }
 
-.sorting-controls:active {
+.sorting-controls a:active {
     opacity: 1;
 }
 
-.items-list ul {
+.sorting-controls-current {
+    opacity: 1;
+}
+
+/* Catalog Items */
+
+.product-list {
+    display: grid;
+    grid-template-columns: 360px 360px;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 40px;
+    margin-left: 72px;
     list-style: none;
 }
+
+.product-list-item img {
+    margin-bottom: 30px;
+}
+
+.item-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Catalog Items Hover */
 
 .item-hover { /* СКРЫЛА ХОВЕРЫ КАРТОЧЕК ТОВАРА, ПОТОМ ДОРАБОТАЕМБ СОГЛАСНО ЗАДАНИЮ */
     display: none;
@@ -904,6 +1024,8 @@ img {
     color: var(--basic-black);
     opacity: 0.2;
 }
+
+/* Pagination */
 
 .pagination-section {
     background-color: var(--special-light-grey);
