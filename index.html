@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
 
-  <body class="main-page-body">   
-    <header class="header">           
+  <body class="page-body">   
+    <header class="header main-header container">           
       <nav class="header-navigation">
         <a class="header-logo">
           <img src="img/logo-device.svg" alt="Логотип интернет-магазина Device" width="163" height="35"> <!-- Лого в хедере -->
@@ -16,12 +16,12 @@
 
         <div class="header-menu"> <!-- Первая линия элементов в хедере (Поиск, войти, сравнить и корзина) -->
           <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="post"> <!-- Форма поиска -->
-            <label class="visually-hidden" for="search">Поиск по сайту</label>
+            <label class="visually-hidden search-text" for="search">Поиск по сайту</label>
             <input class="search-form-input" type="search" id="search" name="search" placeholder="Поиск по сайту">
             <button class="search-form-button" type="submit">Найти</button>
           </form>
 
-          <ul > <!-- Войти, сравнить, корзина в хедере-->
+          <ul class="user-menu"> <!-- Войти, сравнить, корзина в хедере-->
             <li> <!-- Войти в хедере-->
               <a href="">Войти</a>
             </li>
@@ -37,30 +37,50 @@
         </div>
 
         <div class="header-submenu"> <!-- Вторая линия элементов в хедере (навигация - каталог, доставка, гарантия, контакты) -->
-          <ul>
-            <li>
+          <ul class="header-catalog">
+            <li class="header-item-catalog">
               <a class="header-submenu-link catalog" href="">Каталог товаров</a>
-              <ul class="catalog-list">
-                <li><a href="">Виртуальная реальность</a></li>
-                <li><a href="monopods.html">Моноподы для селфи</a></li>
-                <li><a href="">Экшн-камеры</a></li>
-                <li><a href="">Фитнес-браслеты</a></li>
-                <li><a href="">Умные часы</a></li>
-                <li><a href="">Квадрокоптер</a></li>
+              <ul class="catalog-inner-list">
+                <li>
+                  <ul class="catalog-inner-list-column">
+                    <li><a href="">Виртуальная реальность</a></li>
+                    <li><a href="monopods.html">Моноподы для селфи</a></li>
+                    <li><a href="">Экшн-камеры</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul class="catalog-inner-list-column">
+                    <li><a href="">Фитнес-браслеты</a></li>
+                    <li><a href="">Умные часы</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="">Квадрокоптер</a>
+                </li>
               </ul>
-            </li>           
+            </li>
           </ul>
 
-          <ul>
-            <li><a class="header-submenu-link" href="">Доставка</a></li>
-            <li><a class="header-submenu-link" href="">Гарантия</a></li>
-            <li><a class="header-submenu-link" href="">Контакты</a></li>
+          <ul class="header-services">
+            <li class="header-services-item-delivery">
+              <a class="header-submenu-link" href="">Доставка</a>
+            </li>
+
+            <li class="header-services-item-warranty">
+              <a class="header-submenu-link" href="">Гарантия</a>
+            </li>
+
+            <li class="header-services-item-contacts">
+              <a class="header-submenu-link" href="">Контакты</a>
+            </li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <main>
+    <main class="container">
       <h1 class="visually-hidden">Интернет-магазин Device</h1> <!-- Логический заголовок, спрятан -->
 
       <section class="main-slider-section"> <!-- Слайдер - начало блока -->
@@ -219,7 +239,7 @@
         <div class="services-text"> <!-- Текстовый контент -->
           <ul>
             <li> <!-- Доставка -->
-              <h2>Доставка</h2>
+              <h2 class="">Доставка</h2>
               <p>
                 Мы с удовольствием доставим ваш товар прямо к вашему
                 подъезду совершенно бесплатно! Ведь мы неплохо
@@ -252,113 +272,120 @@
       <section class="brands-section"> <!-- Бренды -->
         <h2 class="visually-hidden">Бренды магазина Device</h2> <!-- Логический заголовок, спрятан -->
 
-        <ul class="brands-list">
-          <li>
-            <a href="">
+        <ul class="brand-list">
+          <li class="dji">
+            <a class="brand-item" href="">
               <img src="img/logo-dji-gray.png" alt="Логотип бренда DJI" width="260" height="100"> <!-- DJI -->
             </a>
           </li>
 
-          <li>
-            <a href="">
+          <li class="spgadgets">
+            <a class="brand-item" href="">
               <img src="img/logo-spgadgets-gray.png" alt="Логотип бренда SP Gadgets" width="260" height="100"> <!-- SP Gadgets -->
             </a>
           </li>
 
-          <li>
-            <a href="">
+          <li class="gopro">
+            <a class="brand-item" href="">
               <img src="img/logo-gopro-gray.png" alt="Логотип бренда GoPro" width="260" height="100"> <!-- GoPro -->
             </a>
           </li>
 
-          <li>
-            <a href="">
+          <li class="vive">
+            <a class="brand-item" href="">
               <img src="img/logo-vive-gray.png" alt="Логотип бренда VIVE" width="260" height="100"> <!-- VIVE -->
             </a>
           </li>
         </ul>
-
       </section>
 
-      <section class="about-us-section"> <!-- Начало блока "О нас" -->
-        <h2>О нас</h2>
-        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+      <div class="index-columns">
+        <section class="about-us-section"> <!-- Начало блока "О нас" -->
+          <h2>О нас</h2>
+          <p class="about-us-item">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p class="about-us-item-last">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
 
-        <ul> <!-- Список транспортных компаний -->
-          <li>Деловые линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
-        </ul>
+          <ul class="shipping-list"> <!-- Список транспортных компаний -->
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
 
-        <a class="button" href="">Подробнее о нас</a>
-      </section> <!-- Конец блока "О нас" -->
+          <a class="button button-about-us" href="">Подробнее о нас</a>
+        </section> <!-- Конец блока "О нас" -->
 
-      <section class="contacts-section"> <!-- Начало блока "Контакты" -->
-        <h2>Контакты</h2>
-        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+        <section class="contacts-section"> <!-- Начало блока "Контакты" -->
+          <h2>Контакты</h2>
+          <p class="about-us-item">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 
-        <p> <!-- Добавила для дальнейшей стилизации и чтобы ссылка с кнопкой ниже шла под картой, а не справа от нее. -->
-          <a href=""> <!-- Карта -->
+          <a class="map-container" href=""> <!-- Карта -->
             <img src="img/map.jpg" alt="Карта с расположением офиса Device по адресу г.Москва, улица Строителей, 15" width="560" height="222">
           </a>
-        </p>
 
-        <a class="button" href="">Напишите нам</a>
-      </section> <!-- Конец блока "Контакты" -->
+          <a class="button" href="">Напишите нам</a>
+        </section> <!-- Конец блока "Контакты" -->
+      </div>
     </main>
 
     <footer class="footer">
-      <div> <!-- Первая линия элементов футера (лого, войти/выйти, сравнить, корзина) -->
-        <a class="footer-logo">
-          <img src="img/logo-device.svg" alt="Логотип интернет-магазина Device" width="163" height="35"> <!--Логотип в футере-->
-        </a>
+      <div class="footer-wrapper container">
+        <div class="footer-menu"> <!-- Первая линия элементов футера (лого, войти/выйти, сравнить, корзина) -->
+          <a class="footer-logo">
+            <img src="img/logo-device.svg" alt="Логотип интернет-магазина Device" width="163" height="35"> <!--Логотип в футере-->
+          </a>
 
-        <ul class="footer-menu"> <!-- Войти, сравнить, корзина в футере-->
-          <li> <!-- Войти в футере-->
-            <a href="">Войти</a>
-          </li>
+          <ul class="footer-user-menu"> <!-- Войти, сравнить, корзина в футере-->
+            <li> <!-- Войти в футере-->
+              <a href="">Войти</a>
+            </li>
 
-          <li> <!-- Сравнить в футере-->
-            <a href="">Сравнить</a>
-          </li>
-          
-          <li> <!-- Корзина в футере-->
-            <a href="">Корзина</a>
-          </li>
-        </ul>
-      </div>
-      
-      <div> <!-- Вторая линия элементов футера (адрес, доставка, гарантия, контакты, телефон) -->
-        <address>г. Москва, ул. Строителей, 15</address> <!-- Адрес -->
-
-        <nav class="footer-navigation"> <!-- Навигация в футере -->
-          <ul>
-            <li><a href="">Доставка</a></li>
-            <li><a href="">Гарантия</a></li>
-            <li><a href="">Контакты</a></li>
+            <li> <!-- Сравнить в футере-->
+              <a href="">Сравнить</a>
+            </li>
+            
+            <li> <!-- Корзина в футере-->
+              <a href="">Корзина</a>
+            </li>
           </ul>
-        </nav>
+        </div>
+        
+        <div class="footer-submenu"> <!-- Вторая линия элементов футера (адрес, доставка, гарантия, контакты, телефон) -->
+          <address class="footer-address">г. Москва, ул. Строителей, 15</address> <!-- Адрес -->
 
-        <a class="footer-phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a> <!-- Телефон -->
-      </div>
+          <ul class="footer-services">
+            <li class="footer-services-item-delivery">
+              <a class="footer-submenu-link" href="">Доставка</a>
+            </li>
 
-      <div> <!-- Третья линия элементов футера (соц. сети, логотип  HTML Академии) -->
-        <ul class="social-icons"> <!-- Соц. сети -->
-          <li>
-            <a href="">Facebook</a> <!-- Сделать иконкой Facebook -->              
-          </li>
+            <li class="footer-services-item-warranty">
+              <a class="footer-submenu-link" href="">Гарантия</a>
+            </li>
 
-          <li>
-            <a href="">Instagram</a> <!-- Сделать иконкой Instagram -->
-          </li>
+            <li class="footer-services-item-contacts">
+              <a class="footer-submenu-link" href="">Контакты</a>
+            </li>
+          </ul>
 
-          <li>
-            <a href="">Twitter</a> <!-- Сделать иконкой Twitter -->
-          </li>
-        </ul>
+          <a class="footer-phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a> <!-- Телефон -->
+        </div>
 
-        <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> <!-- Сделать иконкой HTML Academy -->
+        <div class="footer-socials"> <!-- Третья линия элементов футера (соц. сети, логотип  HTML Академии) -->
+          <ul class="social-icons"> <!-- Соц. сети -->
+            <li>
+              <a class="social-item facebook" href="" aria-label="Девайс в Фейсбуке"></a> <!-- Сделать иконкой Facebook -->              
+            </li>
+
+            <li>
+              <a class="social-item instagram" href="" aria-label="Девайс в Инстаграме"></a> <!-- Сделать иконкой Instagram -->
+            </li>
+
+            <li>
+              <a class="social-item twitter" href="" aria-label="Девайс в Твиттере"></a> <!-- Сделать иконкой Twitter -->
+            </li>
+          </ul>
+
+          <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss" width="27" height="34" aria-label="Перейти на сайт HTML Академии"></a> <!-- Сделать иконкой HTML Academy -->
+        </div>
       </div>
     </footer>
 

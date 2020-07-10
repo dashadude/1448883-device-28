@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс - Моноподы</title>
@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   
-  <body class="monopods-page-body">
-    <header class="header">     
+  <body class="page-body">
+    <header class="header container">     
       <nav class="header-navigation">
         <a class="header-logo" href="index.html" aria-label="Перейти на главную страницу интернет-магазина Device">
           <img src="img/logo-device.svg" alt="Логотип интернет-магазина Device" width="163" height="35"> <!-- Лого в хедере -->
@@ -21,7 +21,7 @@
             <button class="search-form-button" type="submit">Найти</button>
           </form>
 
-          <ul> <!-- Выйти, сравнить, корзина в хедере-->
+          <ul class="user-menu"> <!-- Выйти, сравнить, корзина в хедере-->
             <li> <!-- Выйти в хедере-->
               <a href="">Валентин Петухов Выйти</a>
             </li>
@@ -37,30 +37,50 @@
         </div>
 
         <div class="header-submenu"> <!-- Вторая линия элементов в хедере (навигация - каталог, доставка, гарантия, контакты) -->
-          <ul>
-            <li>
+          <ul class="header-catalog">
+            <li class="header-item-catalog">
               <a class="header-submenu-link catalog" href="">Каталог товаров</a>
-              <ul class="catalog-list">
-                <li><a href="">Виртуальная реальность</a></li>
-                <li><a href="monopods.html">Моноподы для селфи</a></li>
-                <li><a href="">Экшн-камеры</a></li>
-                <li><a href="">Фитнес-браслеты</a></li>
-                <li><a href="">Умные часы</a></li>
-                <li><a href="">Квадрокоптер</a></li>
+              <ul class="catalog-inner-list">
+                <li>
+                  <ul class="catalog-inner-list-column">
+                    <li><a href="">Виртуальная реальность</a></li>
+                    <li><a href="monopods.html">Моноподы для селфи</a></li>
+                    <li><a href="">Экшн-камеры</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <ul class="catalog-inner-list-column">
+                    <li><a href="">Фитнес-браслеты</a></li>
+                    <li><a href="">Умные часы</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="">Квадрокоптер</a>
+                </li>
               </ul>
-            </li>           
+            </li>
           </ul>
 
-          <ul>
-            <li><a class="header-submenu-link" href="">Доставка</a></li>
-            <li><a class="header-submenu-link" href="">Гарантия</a></li>
-            <li><a class="header-submenu-link" href="">Контакты</a></li>
+          <ul class="header-services">
+            <li class="header-services-item-delivery">
+              <a class="header-submenu-link" href="">Доставка</a>
+            </li>
+
+            <li class="header-services-item-warranty">
+              <a class="header-submenu-link" href="">Гарантия</a>
+            </li>
+
+            <li class="header-services-item-contacts">
+              <a class="header-submenu-link" href="">Контакты</a>
+            </li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <main>
+    <main class="container">
       <div> <!-- Блок с заголовком и хлебными крошками -->
         <h1 class="monopods-page-title">Моноподы для селфи</h1> <!-- Заголовок -->
 
@@ -218,58 +238,64 @@
     </main>
 
     <footer class="footer">
-      <div> <!-- Первая линия элементов футера (лого, войти/выйти, сравнить, корзина) -->
-        <a class="footer-logo" href="index.html" aria-label="Перейти на главную страницу интернет-магазина Device">
-          <img src="img/logo-device.svg" alt="Логотип интернет-магазина Device" width="163" height="35"> <!--Логотип в футере-->
-        </a>
+      <div class="footer-wrapper container">
+        <div class="footer-menu"> <!-- Первая линия элементов футера (лого, войти/выйти, сравнить, корзина) -->
+          <a class="footer-logo">
+            <img src="img/logo-device.svg" alt="Логотип интернет-магазина Device" width="163" height="35"> <!--Логотип в футере-->
+          </a>
 
-        <ul class="footer-menu"><!-- Выйти, сравнить, корзина в футере-->
-          <li> <!-- Войти/Выйти в футере-->
-            <a href="">Валентин Петухов Выйти</a>
-          </li>
-  
-          <li> <!-- Сравнить в футере-->
-            <a href="">Сравнить</a>
-          </li>
-  
-          <li> <!-- Корзина в футере-->
-            <a href="">Корзина</a>
-          </li>
-        </ul>
-      </div>
-      
-      <div> <!-- Вторая линия элементов футера (адрес, доставка, гарантия, контакты, телефон) -->
-        <address>г. Москва, ул. Строителей, 15</address> <!-- Адрес -->
+          <ul class="footer-user-menu"> <!-- Войти, сравнить, корзина в футере-->
+            <li> <!-- Войти в футере-->
+              <a href="">Валентин Петухов Выйти</a>
+            </li>
 
-        <nav class="footer-navigation"> <!-- Навигация в футере -->
-          <ul>
-            <li><a href="">Доставка</a></li>
-            <li><a href="">Гарантия</a></li>
-            <li><a href="">Контакты</a></li>
+            <li> <!-- Сравнить в футере-->
+              <a href="">Сравнить</a>
+            </li>
+            
+            <li> <!-- Корзина в футере-->
+              <a href="">Корзина</a>
+            </li>
           </ul>
-        </nav>
+        </div>
+        
+        <div class="footer-submenu"> <!-- Вторая линия элементов футера (адрес, доставка, гарантия, контакты, телефон) -->
+          <address class="footer-address">г. Москва, ул. Строителей, 15</address> <!-- Адрес -->
 
-        <p>
+          <ul class="footer-services">
+            <li class="footer-services-item-delivery">
+              <a class="footer-submenu-link" href="">Доставка</a>
+            </li>
+
+            <li class="footer-services-item-warranty">
+              <a class="footer-submenu-link" href="">Гарантия</a>
+            </li>
+
+            <li class="footer-services-item-contacts">
+              <a class="footer-submenu-link" href="">Контакты</a>
+            </li>
+          </ul>
+
           <a class="footer-phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a> <!-- Телефон -->
-        </p>
-      </div>
+        </div>
 
-      <div> <!-- Третья линия элементов футера (соц. сети, логотип  HTML Академии) -->
-        <ul class="social-icons"> <!-- Соц. сети -->
-          <li>
-            <a href="">Facebook</a> <!-- Сделать иконкой Facebook -->              
-          </li>
+        <div class="footer-socials"> <!-- Третья линия элементов футера (соц. сети, логотип  HTML Академии) -->
+          <ul class="social-icons"> <!-- Соц. сети -->
+            <li>
+              <a class="social-item facebook" href="" aria-label="Девайс в Фейсбуке"></a> <!-- Сделать иконкой Facebook -->              
+            </li>
 
-          <li>
-            <a href="">Instagram</a> <!-- Сделать иконкой Instagram -->
-          </li>
+            <li>
+              <a class="social-item instagram" href="" aria-label="Девайс в Инстаграме"></a> <!-- Сделать иконкой Instagram -->
+            </li>
 
-          <li>
-            <a href="">Twitter</a> <!-- Сделать иконкой Twitter -->
-          </li>
-        </ul>
+            <li>
+              <a class="social-item twitter" href="" aria-label="Девайс в Твиттере"></a> <!-- Сделать иконкой Twitter -->
+            </li>
+          </ul>
 
-        <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> <!-- Сделать иконкой HTML Academy -->
+          <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss" width="27" height="34" aria-label="Перейти на сайт HTML Академии"></a> <!-- Сделать иконкой HTML Academy -->
+        </div>
       </div>
     </footer>
 
