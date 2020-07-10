@@ -168,7 +168,8 @@ img {
     margin: 0;
 }
 
-.user-menu li {
+.user-menu li,
+.user-menu-monopods li {
     box-sizing: border-box;
 }
 
@@ -178,13 +179,30 @@ img {
 }
 
 .user-menu li:nth-child(2),
-.user-menu li:nth-child(3) {
+.user-menu li:nth-child(3),
+.user-menu-monopods li:nth-child(3),
+.user-menu-monopods li:nth-child(4) {
   width: 110px;
   padding-left: 27px;
 }
 
-.user-menu li:nth-child(3) {
+.user-menu li:nth-child(3),
+.user-menu-monopods li:nth-child(4) {
     text-align: right;
+}
+
+.user-menu-monopods li:nth-child(1) {
+    width: 173px;
+    padding-left: 24px;
+}
+
+.user-menu-monopods li:nth-child(2) {
+    width: 107px;    
+}
+
+.logout {
+    color: var(--basic-black);
+    opacity: 0.3;
 }
 
 .search-form {
@@ -311,7 +329,7 @@ img {
     top: 22px;
     left: -60px;
     z-index: 2;
-    /* display: none; */
+    display: none;
     width: 1160px;
     padding-top: 26px;
     padding-bottom: 34px;
@@ -541,7 +559,8 @@ img {
     margin: 0;
 }
 
-.footer-user-menu li {
+.footer-user-menu li,
+.footer-user-menu-monopods li {
     box-sizing: border-box;
 }
 
@@ -550,14 +569,25 @@ img {
     padding-left: 24px;
 }
 
-.footer-user-menu li:nth-child(2) {
+.footer-user-menu li:nth-child(2),
+.footer-user-menu-monopods li:nth-child(3) {
     width: 135px;
     padding-left: 25px;
 }
 
-.footer-user-menu li:nth-child(3) {
+.footer-user-menu li:nth-child(3),
+.footer-user-menu-monopods li:nth-child(4) {
     width: 82px;
     padding-left: 22px;
+}
+
+.footer-user-menu-monopods li:nth-child(1) {
+    width: 179px;
+    padding-left: 26px;
+}
+
+.footer-user-menu-monopods li:nth-child(2) {
+    width: 84px;
 }
 
 .footer-logo {
@@ -579,17 +609,21 @@ img {
     list-style: none;
 }
 
-.footer-user-menu a {
+.footer-user-menu a,
+.footer-user-menu-monopods a {
     color: var(--basic-white);
     opacity: 0.7;
 }
 
 .footer-user-menu a:hover, 
-.footer-user-menu a:focus {
+.footer-user-menu a:focus,
+.footer-user-menu-monopods a:hover, 
+.footer-user-menu-monopods a:focus {
     color: var(--basic-white);
 }
 
-.footer-user-menu a:active {
+.footer-user-menu a:active,
+.footer-user-menu-monopods a:active {
     color: var(--basic-white);
     opacity: 0.3;
 }
