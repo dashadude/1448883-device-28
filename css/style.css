@@ -830,6 +830,7 @@ img {
 .button {
     position: relative;
     display: inline-block;
+    vertical-align: baseline;
     z-index: 1;
     font-family: "Gilroy", Arial, sans-serif;
     font-weight: 800;
@@ -1804,6 +1805,7 @@ img {
 
 .sorting-type li {
     display: inline-block;
+    vertical-align: baseline;
     margin-right: 27px;
 }
 
