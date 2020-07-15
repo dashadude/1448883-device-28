@@ -8,11 +8,12 @@
   </head>
 
   <body class="page-body">   
-    <header class="header main-header container">           
+    <header class="header main-header container">  
+      <a class="header-logo">
+        <img src="img/logo-device.svg" alt="Логотип интернет-магазина Device" width="163" height="35"> <!-- Лого в хедере -->
+      </a>
+
       <nav class="header-navigation">
-        <a class="header-logo">
-          <img src="img/logo-device.svg" alt="Логотип интернет-магазина Device" width="163" height="35"> <!-- Лого в хедере -->
-        </a>
 
         <div class="header-menu"> <!-- Первая линия элементов в хедере (Поиск, войти, сравнить и корзина) -->
           <form class="search-form" action="https://echo.htmlacademy.ru/courses" method="post"> <!-- Форма поиска -->
@@ -116,15 +117,15 @@
 
               <table class="slider-table">
                 <tr class="table-column-first">
-                  <th class="table-item-first">8,5 м</th>
-                  <th class="table-item-second">5 кг</th>
-                  <th class="table-item-third">Карбон</th>
+                  <td class="table-item-first">8,5 м</td>
+                  <td class="table-item-second">5 кг</td>
+                  <td class="table-item-third">Карбон</td>
                 </tr>
 
                 <tr>
-                  <td>Длина палки</td>
-                  <td class="table-item-second">Вес палки</td>
-                  <td>Материал</td>
+                  <th class="monopod-length">Длина палки</th>
+                  <th class="monopod-weight">Вес палки</th>
+                  <th class="monopod-material">Материал</th>
                 </tr>
               </table>              
             </div>
@@ -151,11 +152,11 @@
 
               <table class="slider-table">
                 <tr>
-                  <th>48 часов</th>
+                  <td>48 часов</td>
                 </tr>
 
                 <tr>
-                  <td>Без подзарядки</td>
+                  <th>Без подзарядки</th>
                 </tr>
               </table>  
             </div>
@@ -183,13 +184,13 @@
 
               <table class="slider-table slider-table-3">
                 <tr>
-                  <th>800 м</th>
-                  <th>50 м</th>
+                  <td>800 м</td>
+                  <td>50 м</td>
                 </tr>
 
                 <tr>
-                  <td>Дальность полета</td>
-                  <td>Радиус поражения</td>
+                  <th>Дальность полета</th>
+                  <th>Радиус поражения</th>
                 </tr>
               </table>
             </div>              
@@ -446,8 +447,6 @@
       <h2 class="visually-hidden">Обратная связь</h2>      
       <form action="https://echo.htmlacademy.ru/courses" method="post">
         <div class="modal-contact-us-wrapper">
-          <legend class="visually-hidden">Напишите нам</legend> <!-- Спрятано -->
-
           <div>
             <label for="contact-us-name">Ваше имя:</label>
             <input class="input-check" type="text" id="contact-us-name" name="name" placeholder="Имя Фамилия">
@@ -463,9 +462,8 @@
           <label for="contact-us-message">Текст письма</label>
           <textarea id="contact-us-message" name="message" placeholder="В свободной форме" required></textarea>
         </div>
-
-          <button class="button send-message-button" type="submit">Отправить</button>
-        </div>
+        
+        <button class="button send-message-button" type="submit">Отправить</button>        
       </form>
       <button class="modal-close-button" type="button" aria-label="Закрыть всплывающее окно"></button>
     </section>
